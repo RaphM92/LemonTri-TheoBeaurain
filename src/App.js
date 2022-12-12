@@ -15,6 +15,7 @@ const App = () => {
     return (
         <div className="App">
             { renderComponent(location && location.pathname) }
+            
             <Footer />
         </div>
     )
