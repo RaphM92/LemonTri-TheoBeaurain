@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
+import { useLocation } from 'react-router-dom';
+
+import { renderComponent } from "./utils/utils";
+
+// Pages components
+import { Footer } from "./containers";
+
+// CSS imports
 import './App.css';
 
-function App() {
+const App = () => {
+    const location = useLocation();
+
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>Edit <code>src/App.js</code> and save to reload.</p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-            </header>
+            { renderComponent(location && location.pathname) }
+
+            <Footer />
         </div>
-    );
+    )
 }
 
 export default App;
