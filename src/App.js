@@ -11,11 +11,10 @@ import './App.css';
 
 const App = () => {
     const location = useLocation();
-
+    
     return (
         <div className="App">
             { renderComponent(location && location.pathname) }
-
             <Footer />
         </div>
     )

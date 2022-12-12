@@ -4,7 +4,7 @@ const Footer = () => {
     console.log();
 
     return (
-        <div>
+        <div className="Footer">
             Footer
         </div>
     );
