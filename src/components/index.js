@@ -1,11 +1,6 @@
-function leSaviezVous(props) {
-    return <h1>Bonjour, {props.name}</h1>;
-    const data = [
-        {
-            texte: " 1 "
-        },
-        {
-            texte: " 2 "
-        },
-    ]
-  }
+// Loader
+export { default as Lottie } from "./Lottie/Lottie";
+
+// Components
+export { default as HomeCategory } from "./HomeCategory/HomeCategory";
+export { default as Logo } from "./Logo/Logo";

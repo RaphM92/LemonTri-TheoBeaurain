@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("./assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html, body, #root {
+    height: 100%;
+    font-family: "Calibri";
+    background-color: #FFF9E5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+    text-align: center;
+    overflow-y: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.app-loader {
+    width: 100%;
+    height: 78%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.App-link {
-  color: #61dafb;
+.app-loader .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 125px;
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app-presentation {
+    padding: 24px;
+    margin: 10px 0px;
+    text-align: center;
+    font-size: 18px;
+    background-color: #069B3E;
+    font-family: "Bebas Neue";
+    color: white;
+    font-weight: 300;
+    letter-spacing: .7px;
+    line-height: 22px;
+}
+
+.app-lottie {
+    position: absolute;
+    bottom: 175px;
+    width: 75%;
 }

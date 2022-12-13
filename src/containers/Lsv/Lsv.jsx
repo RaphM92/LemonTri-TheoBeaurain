@@ -1,5 +1,6 @@
+import { useEffect, useState } from 'react';
+
 import "./lsv.css";
-import React, {useEffect, useState} from 'react';
 
 const Lsv = () => {
     const Texte = [
@@ -34,52 +35,31 @@ const Lsv = () => {
             value:"83% de la population française dit consommer régulièrement du café Chaque français consomme en moyenne 5,8 kg de café par an : 1500 tasses de café sont bues chaque minute en France. 55 % : C’est l’objectif de valorisation des biodéchets en 2020 fixé par la Loi de Transition Énergétique."
         }
     ];
-     const [TexteData,setTexteData] = useState(Texte[0].value);
+    const [ TexteData, setTexteData ] = useState(Texte[0].value);
 
-     useEffect( () => {
-         autoSlide();
-     }, [])
+    useEffect(() => { 
+        autoSlide() 
+    }, []);
 
-
-
-
-// Returns a Promise that resolves after "ms" Milliseconds
     const timer = ms => new Promise(res => setTimeout(res, ms))
 
-    const autoSlide = async () => { // We need to wrap the loop into an async function for this to work
+    const autoSlide = async () => {
         for (let i = 0; i < Texte.length; i++) {
             let slider = Texte[i].value;
             setTexteData((slider));
-            await timer(3000); // then the created Promise can be awaited
+            await timer(3000);
         }
-    }
-
-
-
-    const handleClick= (index)=>{
-        console.log(index)
-        const TexteSlider = Texte[index].value;
-        setTexteData(TexteSlider)
     }
 
     return (
         <div className="container">
-
             <div className="logo">
-                <h1>Le Saviez Vous ?</h1>
-                <img src="" alt=""/>
+                <h1 className="title">Le Saviez Vous ?</h1>
             </div>
 
             <div className="card">
-            <div className="texte">{TexteData}</div>
+                <div className="texte">{TexteData}</div>
             </div>
-
-                        <div className="slide">
-                            {Texte.map((data,i)=>
-                            <h1 className="point" onClick={()=>handleClick(i)}>.</h1>)}
-                       
-                             </div>
-                   
         </div>
     );
 };
