@@ -6,15 +6,3 @@
     flex-direction: column;
     margin-bottom: 64px;
 }
-
-.home-presentation {
-    padding: 24px;
-    margin: 10px 0px;
-    font-size: 18px;
-    background-color: #069B3E;
-    font-family: "Bebas Neue";
-    color: white;
-    font-weight: 300;
-    letter-spacing: .7px;
-    line-height: 22px;
-}

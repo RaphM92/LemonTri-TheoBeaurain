@@ -1,10 +1,8 @@
 import i18next from "i18next";
 import { useState } from "react";
 
-import { Logo } from "../../components";
 import OutsideClick from "../../hooks/OutsideClick";
 
-import LogoURL from "../../assets/images/logo.png";
 import FRLanguage from "../../assets/icons/fr.png";
 import ENLanguage from "../../assets/icons/en.png";
 import ChevronDown from "../../assets/icons/chevron-down-solid.svg";

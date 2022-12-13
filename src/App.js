@@ -2,34 +2,49 @@ import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { renderComponent } from "./utils/utils";
 
-// Pages components
 import { Header, Footer } from "./containers";
-import { Lottie } from "./components";
+import { Logo, Lottie } from "./components";
 
-// CSS imports
+import LogoURL from "./assets/images/logo.png";
+
 import './App.css';
 
 const App = () => {
-    const [ showLoader, setShowLoader ] = useState(true);
     const location = useLocation();
 
+    const [ showLoader, setShowLoader ] = useState(true);    
+
     useEffect(() => {
-        setTimeout(() => setShowLoader(false), 1500)
-    }, []);
+        setTimeout(() => setShowLoader(false), 5000);
+    }, [])
+
+    if (showLoader) {
+        return (
+            <div className="app-loader">
+                <div className="logo">
+                    <Logo image={LogoURL} />
+                </div>
+                
+                <span className="app-presentation">
+                    Bienvenue sur LemonTri, une web app pour apprendre les différentes consignes sur le recyclage afin d'adopter un mode de vie plus durable.
+                </span>
+
+                <div className="app-lottie">
+                    <Lottie show={showLoader} />
+                </div>
+            </div>
+        );
+    }
 
     return (
-        showLoader
-            ? <div className="App-loader">
-                <Lottie show={showLoader} />
-            </div>
-            : <div className="App">
-                <Header />
+        <div className="app">
+            <Header />
 
-                { renderComponent(location && location.pathname) }
+            { renderComponent(location && location.pathname) }
             
-                <Footer />
-            </div>
-    )
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

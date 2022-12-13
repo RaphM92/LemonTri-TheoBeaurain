@@ -12,10 +12,6 @@ const Home = () => {
 
     return (
         <div className="home-container">
-            <span className="home-presentation">
-                Bienvenue sur LemonTri, une web app pour apprendre les différentes consignes sur le recyclage afin d'adopter un mode de vie plus durable.
-            </span>
-
             <ListCategories data={data} />
         </div>
     );
