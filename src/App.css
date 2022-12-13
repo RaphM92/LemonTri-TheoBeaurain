@@ -3,9 +3,14 @@
     src: url("./assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
 }
 
+@font-face {
+	font-family: "Poppins";
+	src: url("./assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+
 html, body, #root {
     height: 100%;
-    font-family: "Calibri";
+    font-family: "Poppins";
     background-color: #FFF9E5;
 }
 
