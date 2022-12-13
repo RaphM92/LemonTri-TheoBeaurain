@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+   
+ 
+}
+h1{
+    color: #FFCC07;
+    margin: 0px;
+}
+.point{
+    font-size: 50px;
+}
+.card{
+    display: flex;
+    width: 550px;
+    height: 150px;
+    background-color: #069B3E;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+     box-shadow: 0 0 20px 5px grey;
+     transition: 1s;
+  
+}
+.logo img{
+    width: 50px;
+}
+.texte{
+    font-family: Roboto;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin: 5px;
+}
+.slide{
+    display: flex;
+    flex-direction:row;
+}
+.slide h1:hover{
+    cursor: pointer;
+    
+}
+@media screen and (max-width: 900px) {
+    .card{
+width: 80%;
+
+    }
+}

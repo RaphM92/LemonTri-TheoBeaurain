@@ -5,9 +5,13 @@ import { renderComponent } from "./utils/utils";
 
 // Pages components
 import { Footer } from "./containers";
+//import Lsv from "./containers/Lsv/Lsv";
+import { Lsv } from "./containers";
+
 
 // CSS imports
 import './App.css';
+
 
 const App = () => {
     const location = useLocation();
@@ -16,6 +20,7 @@ const App = () => {
         <div className="App">
             { renderComponent(location && location.pathname) }
 
+            <Lsv />
             <Footer />
         </div>
     )
