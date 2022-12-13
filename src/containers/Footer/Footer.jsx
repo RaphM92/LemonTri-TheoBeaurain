@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import i18next from "i18next";
 
 import Camera from "../../assets/icons/camera-solid.svg";
@@ -14,7 +15,7 @@ const Footer = () => {
     return (
         <div className="footer-container">
             <div className="footer-icons">
-                <img className="footer-icon" src={Home} alt="" />
+                <Link to="/"><img className="footer-icon" src={Home} alt="" /></Link>
                 <img className="footer-icon" src={Search} alt="" />
 
                 <div className="footer-main-icon">

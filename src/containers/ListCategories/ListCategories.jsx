@@ -8,7 +8,8 @@ const ListCategories = ({ data }) => (
             data && data.map(
                 (category, index) => <HomeCategory
                     key={index}
-                    image={category}
+                    image={category?.image}
+					url={category?.url}
                 />
             )
         }

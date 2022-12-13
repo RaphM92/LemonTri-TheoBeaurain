@@ -5,21 +5,28 @@
     align-items: flex-start;
     padding: 20px 21px;
     background-color: white;
-    margin: 18px 27px;
-	margin-top: 50px;
+	margin-top: 35px;
     border-radius: 25px;
 }
 
 .lsv-title {
 	display: flex;
-	align-items: flex-start;
-	justify-content: center;
+	align-items: center;
+	justify-content: flex-start;
+	position: relative;
+    width: 100%;
 	position: relative;
 	margin-bottom: 12px;
 }
 
 .lsv-title .lsv-help-icon {
 	margin-right: 15px;
+}
+
+.lsv-lemon {
+	position: absolute;
+	right: 90px;
+    top: 0;
 }
 
 .lsv-lemon img {

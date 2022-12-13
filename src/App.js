@@ -5,7 +5,7 @@ import { renderComponent } from "./utils/utils";
 // Pages components
 
 import { Footer } from "./containers";
-import { Logo, Lottie, Lsv } from "./components";
+import { Logo, Lottie } from "./components";
 
 import LogoURL from "./assets/images/logo.png";
 
@@ -16,9 +16,9 @@ const App = () => {
 
     const [ showLoader, setShowLoader ] = useState(true);
 
-    // TODO : Set timer to 3000
+	// TODO : 3000
     useEffect(() => {
-        setTimeout(() => setShowLoader(false), 3000);
+        setTimeout(() => setShowLoader(false), 0);
     }, [])
 
     if (showLoader) {
@@ -41,8 +41,6 @@ const App = () => {
 
     return (
         <div className="app">
-            <Lsv />
-
             { renderComponent(location && location.pathname) }
 
             <Footer />
