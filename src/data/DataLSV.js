@@ -1,6 +1,7 @@
 // TODO : Trad
 
 const DataLSV = (t) => ([
+	"Pour la préservations de l’environnement et la mise en place de filières de recyclage efficaces, une éco-contribution est incluse dans le prix de vente des ampoules.",
     "Seulement 1 % des gobelets en plastique sont recyclés 40% des gobelets en plastique sont incinérés 60% sont enfouis 3,2 g de pétrole sont nécessaires à la fabrication d’un gobelet plastique",
     "5,2 milliards de canettes sont consommées chaque année en France En France, 38% des canettes sont recyclées comme matière première secondaire (donc participent à la création de nouvelles canettes) et 22% sont valorisées en sous-couche routière La canette a une paroi de 0,1 mm d’épaisseur, moins que l’épaisseur d’un cheveu Elle peut pourtant supporter jusqu'à 90 kg sans problème !",
     "2,5 millions de tonnes de verre ont été collectées en France en 2017 L’utilisation de verre recyclé s’élève à 56% Le taux de recyclage du verre en 2016 s’élève à 76 % 227 000 tonnes de verre ont été réemployées en 2017",

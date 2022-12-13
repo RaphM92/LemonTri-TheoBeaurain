@@ -6,10 +6,9 @@ const ListCategories = ({ data }) => (
     <div className="list-categories">
         {
             data && data.map(
-                (category, index) => <HomeCategory 
-                    key={index} 
-                    title={category.label} 
-                    color={category.color}
+                (category, index) => <HomeCategory
+                    key={index}
+                    image={category}
                 />
             )
         }

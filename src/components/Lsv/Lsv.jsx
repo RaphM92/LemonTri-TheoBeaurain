@@ -3,8 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 import { dataLSV } from '../../data';
 
+import HelpCircle from "../../assets/icons/help-circle.png";
+import LemonQuestion from "../../assets/images/lemon-question.png";
+
 import "./lsv.css";
 
+// TODO : Trad
 const Lsv = () => {
     const { t } = useTranslation();
     const data = dataLSV(t);
@@ -15,20 +19,25 @@ const Lsv = () => {
         const interval = setInterval(() => {
             const random = Math.floor(Math.random() * data.length);
             setCurrentLSV(data[random]);
-        }, 3000);
-        
+        }, 60000);
+
         return () => clearInterval(interval);
     }, [ data ]);
 
     return (
-        <div className="container">
-            <div className="logo">
-                <h1 className="title">Le Saviez Vous ?</h1>
-            </div>
+        <div className="lsv-container">
+            <div className="lsv-title">
+				<img src={HelpCircle} alt="" className="lsv-help-icon" />
+				<span>Le saviez-vous ?</span>
 
-            <div className="card">
-                <div className="texte">{ currentLSV }</div>
-            </div>
+				<div className="lsv-lemon">
+					<img src={LemonQuestion} alt="" />
+				</div>
+			</div>
+
+			<div className="lsv-data">
+				<span>{ currentLSV }</span>
+			</div>
         </div>
     );
 };
