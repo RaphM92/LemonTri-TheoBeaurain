@@ -8,6 +8,8 @@
     align-items: center;
     justify-content: center;
     min-height: 48px;
+    z-index: 1000;
+    background-color: white;
 }
 
 .footer-icons {

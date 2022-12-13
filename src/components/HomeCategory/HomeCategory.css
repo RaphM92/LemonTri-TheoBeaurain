@@ -1,5 +1,5 @@
 .home-category-container {
-    width: 45%;
+    width: 42%;
     position: relative;
     height: 90px;
     border-radius: 8px;
@@ -7,7 +7,7 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin: 8px;
+    margin: 18px 12px;
     box-shadow: 5px 5px 5px #4D4D4D;
     max-width: 200px;
 }

@@ -1,21 +1,13 @@
 
 import "./HomeCategory.css";
 
-const HomeCategory = ({ image, title }) => {
-    console.log('image: ', image);
-    console.log();
+const HomeCategory = ({ color, title }) => console.log('color: ', color) || (
+    <div className="home-category-container" style={{ backgroundColor: color || "#4D4D4D" }}>
 
-    return (
-        <div className="home-category-container">
-            { image && <img src={image} alt="" /> }
-
-            <div className="home-category-overlay"><span>&nbsp;</span></div>
-
-            <div className="home-category-title">
-                <span>{ title }</span>
-            </div>
+        <div className="home-category-title">
+            <span>{ title }</span>
         </div>
-    );
-};
+    </div>
+);
 
 export default HomeCategory;

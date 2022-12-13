@@ -1,28 +1,22 @@
-import { HomeCategory } from "../../components";
+import { useTranslation } from "react-i18next";
+
+import dataCategories from "../../data/DataCategories";
+
+import { ListCategories } from "../../containers";
 
 import "./home.css";
 
-import Bottles from "../../assets/images/bottles.png";
-import Cardboard from "../../assets/images/cardboards.png";
-import Cupboards from "../../assets/images/cupboards.png";
-
-
 const Home = () => {
-    console.log();
+    const { t } = useTranslation();
+    const data = dataCategories(t);
 
     return (
         <div className="home-container">
-            Coucou les z'amis
-            
-            <div className="home-categories">
-                <HomeCategory title="Bouteille en plastique" image={Cupboards} />
-                <HomeCategory title="Cartons" image={Cardboard} />
-                <HomeCategory title="Bouteille en plastique" image={Bottles} />
-                <HomeCategory title="Cartons" image={Cardboard} />
-                <HomeCategory title="Cartons" image={Cardboard} />
-                <HomeCategory title="Bouteille en plastique" image={Bottles} />
-                <HomeCategory title="Bouteille en plastique" image={Bottles} />
-            </div>
+            <span className="home-presentation">
+                Bienvenue sur LemonTri, une web app pour apprendre les différentes consignes sur le recyclage afin d'adopter un mode de vie plus durable.
+            </span>
+
+            <ListCategories data={data} />
         </div>
     );
 };

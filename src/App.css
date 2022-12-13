@@ -1,4 +1,27 @@
+@font-face {
+    font-family: "Bebas Neue";
+    src: url("./assets/fonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+
+html, body, #root {
+    height: 100%;
+    font-family: "Calibri";
+}
+
 .App {
     text-align: center;
     overflow-y: hidden;
+}
+
+.App-loader {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.App-loader div {
+    height: 100%;
 }
