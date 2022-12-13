@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { renderComponent } from "./utils/utils";
 
-import { Header, Footer } from "./containers";
+// Pages components
+
+import { Header, Footer, Lsv } from "./containers";
 import { Logo, Lottie } from "./components";
 
 import LogoURL from "./assets/images/logo.png";
@@ -39,6 +41,7 @@ const App = () => {
     return (
         <div className="app">
             <Header />
+            <Lsv />
 
             { renderComponent(location && location.pathname) }
             

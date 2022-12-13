@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 
-import dataCategories from "../../data/DataCategories";
+import { dataCategories } from "../../data";
 
 import { ListCategories } from "../../containers";
 import { Title } from "../../components";
