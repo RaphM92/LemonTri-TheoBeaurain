@@ -1,11 +1,18 @@
+import { useTranslation } from "react-i18next";
+
+import dataCategories from "../../data/DataCategories";
+
+import { ListCategories } from "../../containers";
+
 import "./home.css";
 
 const Home = () => {
-    console.log();
+    const { t } = useTranslation();
+    const data = dataCategories(t);
 
     return (
-        <div>
-            Home
+        <div className="home-container">
+            <ListCategories data={data} />
         </div>
     );
 };
