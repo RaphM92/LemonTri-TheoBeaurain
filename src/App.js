@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { renderComponent } from "./utils/utils";
 
-// Pages components
-
 import { Footer } from "./containers";
 import { Logo, Lottie } from "./components";
 
@@ -18,7 +16,7 @@ const App = () => {
 
 	// TODO : 3000
     useEffect(() => {
-        setTimeout(() => setShowLoader(false), 0);
+        setTimeout(() => setShowLoader(false), 3000);
     }, [])
 
     if (showLoader) {
@@ -28,6 +26,7 @@ const App = () => {
                     <Logo image={LogoURL} />
                 </div>
 
+				{ /* TODO : I18N */ }
                 <span className="app-presentation">
                     Bienvenue sur LemonTri, une web app pour apprendre les différentes consignes sur le recyclage afin d'adopter un mode de vie plus durable.
                 </span>

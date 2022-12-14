@@ -3,12 +3,12 @@ import { useTranslation } from 'react-i18next';
 
 import dataLSVGeneral from '../../data/DataLSVGeneral';
 
-import HelpCircle from "../../assets/icons/helpCategory/help-default.svg";
+import Help from "../../assets/icons/help";
 import LemonQuestion from "../../assets/images/lemon-question.png";
 
 import "./lsv.css";
 
-const Lsv = ({ color, icon }) => {
+const Lsv = ({ color }) => {
     const { t, i18n } = useTranslation();
     const data = dataLSVGeneral(t);
 
@@ -29,7 +29,7 @@ const Lsv = ({ color, icon }) => {
 
             setCurrentLSV(data[random]);
 			setSelectedLSV(random);
-        }, 5000);
+        }, 60000);
 
         return () => clearInterval(interval);
     }, [ data ]);
@@ -37,7 +37,8 @@ const Lsv = ({ color, icon }) => {
     return (
         <div className="lsv-container">
             <div className="lsv-title">
-				<img src={icon || HelpCircle} alt="" className="lsv-help-icon" />
+				<Help color={color || "#A462C3"} />
+
 				<span style={{ color: color }}>{t("DidUKnow")}</span>
 
 				<div className="lsv-lemon">

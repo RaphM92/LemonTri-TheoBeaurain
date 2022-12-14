@@ -1,15 +1,15 @@
 import { useTranslation } from "react-i18next";
 
-import "./seeMore.css";
+import "./button.css";
 
-const SeeMore = ({ color }) => {
+const Button = ({ color }) => {
 	const { t } = useTranslation();
 
 	return (
 		<button className="button-see-more" style={{ backgroundColor: color }}>
 			<span>{t("FindOutMore")}</span>
 		</button>
-	);
+	)
 };
 
-export default SeeMore;
+export default Button;

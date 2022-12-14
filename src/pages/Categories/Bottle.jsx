@@ -5,18 +5,18 @@ import {
 	Infos,
 	Banned,
 	Lsv,
-	SeeMore
 } from "../../components";
-import { DataBiowaste as dataBiowaste } from "../../data/DataCategories";
+import { SeeMore } from "../../containers";
+import { DataBottle as dataBottle } from "../../data/DataCategories";
 
-import "./biowaste.css";
+import "./categories.css";
 
-const Biowaste = () => {
+const Bottle = () => {
 	const { t } = useTranslation();
-	const data = dataBiowaste(t);
+	const data = dataBottle(t);
 
 	return (
-		<div className="biowaste-container">
+		<div className="categories-container">
 			<CategoryTitle
 				icon={data?.icon}
 				title={data?.title}
@@ -30,14 +30,14 @@ const Biowaste = () => {
 
 			<Banned banned={data?.banned} />
 
-			<Lsv
-				color={data?.color}
-				icon={data?.help}
-			/>
+			<Lsv color={data?.color} />
 
-			<SeeMore color={data?.color} />
+			<SeeMore
+				color={data?.color}
+				data={data?.cycleData}
+			/>
 		</div>
 	);
 };
 
-export default Biowaste;
+export default Bottle;
