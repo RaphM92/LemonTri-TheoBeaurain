@@ -32,7 +32,7 @@ const DataRouting = () => ([
 	{ label: t("Paper"), url: "papier", image: Papier },
 	{ label: t("ConfidentialPaper"), url: "papier-confidentiel", image: PapierConfidentiel },
 	{ label: t("Glass"), url: "verre", image: Verre },
-	{ label: "DIB", url: "DIB", image: DIB }
+	{ label: t("DIB"), url: "DIB", image: DIB }
 ]);
 
 export default DataRouting;

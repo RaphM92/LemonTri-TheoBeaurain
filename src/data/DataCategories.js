@@ -7,6 +7,13 @@ import Biowaste3 from "../assets/images/imagesCycle/biowaste/3.png";
 import Biowaste4 from "../assets/images/imagesCycle/biowaste/4.png";
 import Biowaste5 from "../assets/images/imagesCycle/biowaste/5.png";
 import Biowaste6 from "../assets/images/imagesCycle/biowaste/6.png";
+import BoisIcon from "../assets/images/iconsCategory/Bois.png";
+import CartonIcon from "../assets/images/iconsCategory/CartonPlie.png";
+import GobeletPlastiqueIcon from "../assets/images/iconsCategory/GobeletPlastique.png";
+import MarcIcon from "../assets/images/iconsCategory/Marc.png";
+import NeonAmpouleIcon from "../assets/images/iconsCategory/NeonAmpoule.png";
+import PapierConfidentielIcon from "../assets/images/iconsCategory/PapierConfidentiel.png";
+import DIBIcon from "../assets/images/iconsCategory/DIB.png";
 
 export const DataBiowaste = (t) => ({
 	title: t("Biowaste"),
@@ -44,5 +51,122 @@ export const DataBottle = (t) => ({
 		{ image: Biowaste2, label: t("BottleCycle6") },
 		{ image: Biowaste2, label: t("BottleCycle7") },
 		{ image: Biowaste2, label: t("BottleCycle8") }
+	]
+});
+
+// TODO : Change icon, infos, image
+export const DataTree = (t) => ({
+	title: t("Tree"),
+	icon: BoisIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("TreeBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("TreeCycle1") },
+		{ image: Biowaste2, label: t("TreeCycle2") },
+		{ image: Biowaste2, label: t("TreeCycle3") },
+		{ image: Biowaste2, label: t("TreeCycle4") },
+		{ image: Biowaste2, label: t("TreeCycle5") },
+		{ image: Biowaste2, label: t("TreeCycle6") },
+		{ image: Biowaste2, label: t("TreeCycle7") },
+		{ image: Biowaste2, label: t("TreeCycle8") }
+	]
+});
+
+export const DataCardboard = (t) => ({
+	title: t("Carton"),
+	icon: CartonIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("CartonBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("CartonCycle1") },
+		{ image: Biowaste2, label: t("CartonCycle2") },
+		{ image: Biowaste2, label: t("CartonCycle3") },
+		{ image: Biowaste2, label: t("CartonCycle4") },
+		{ image: Biowaste2, label: t("CartonCycle5") },
+		{ image: Biowaste2, label: t("CartonCycle6") },
+		{ image: Biowaste2, label: t("CartonCycle7") },
+		{ image: Biowaste2, label: t("CartonCycle8") }
+	]
+});
+
+export const DataGobeletPlastique = (t) => ({
+	title: t("GobeletPlastique"),
+	icon: GobeletPlastiqueIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("GobeletPlastiqueBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("GobeletPlastiqueCycle1") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle2") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle3") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle4") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle5") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle6") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle7") },
+		{ image: Biowaste2, label: t("GobeletPlastiqueCycle8") }
+	]
+});
+
+export const DataMarc = (t) => ({
+	title: t("Marc"),
+	icon: MarcIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("MarcBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("MarcCycle1") },
+		{ image: Biowaste2, label: t("MarcCycle2") },
+		{ image: Biowaste2, label: t("MarcCycle3") },
+		{ image: Biowaste2, label: t("MarcCycle4") },
+		{ image: Biowaste2, label: t("MarcCycle5") },
+		{ image: Biowaste2, label: t("MarcCycle6") }
+	]
+});
+
+export const DataNeonAmpoule = (t) => ({
+	title: t("NeonAmpoule"),
+	icon: NeonAmpouleIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("NeonAmpouleBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("NeonAmpouleCycle1") },
+		{ image: Biowaste2, label: t("NeonAmpouleCycle2") },
+		{ image: Biowaste2, label: t("NeonAmpouleCycle3") },
+		{ image: Biowaste2, label: t("NeonAmpouleCycle4") },
+		{ image: Biowaste2, label: t("NeonAmpouleCycle5") },
+		{ image: Biowaste2, label: t("NeonAmpouleCycle6") }
+	]
+});
+
+export const DataPapierConfidentiel = (t) => ({
+	title: t("PapierConfidentiel"),
+	icon: PapierConfidentielIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("PapierConfidentielBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("PapierConfidentielCycle1") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle2") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle3") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle4") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle5") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle6") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle7") },
+		{ image: Biowaste2, label: t("PapierConfidentielCycle8") }
+	]
+});
+
+export const DataAutres = (t) => ({
+	title: t("Autres"),
+	icon: DIBIcon,
+	color: "#ECB342",
+	infos: { image: BiowasteIcon },
+	banned: t("AutresBanned"),
+	cycleData: [
+		{ image: Biowaste1, label: t("AutresCycle1") },
+		{ image: Biowaste2, label: t("AutresCycle2") }
 	]
 });

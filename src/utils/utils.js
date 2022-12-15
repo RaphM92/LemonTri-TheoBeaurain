@@ -9,7 +9,14 @@ import {
 	Bottle,
 	Score,
 	PhotoInput,
-	SearchPage
+	SearchPage,
+	Tree,
+	Carton,
+	GobeletPlastique,
+	Marc,
+	NeonAmpoule,
+	PapierConfidentiel,
+	Autres
 } from "../pages";
 
 
@@ -17,6 +24,20 @@ export const renderComponent = (location) => {
 	switch (location) {
 		case "/settings":
 			return <Settings />;
+		case "/bois":
+			return <Tree />;
+		case "/marc":
+			return <Marc />;
+		case "/carton":
+			return <Carton />;
+		case "/gobelet-plastique":
+			return <GobeletPlastique />
+		case "/papier-confidentiel":
+			return <PapierConfidentiel />
+		case "/DIB":
+			return <Autres />
+		case "/neon-ampoule":
+			return <NeonAmpoule />
 		case "/photo":
 			return <PhotoInput />
 		case "/score":
