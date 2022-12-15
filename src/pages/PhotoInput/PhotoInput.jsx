@@ -8,9 +8,6 @@ import Camera from "../../assets/icons/camera.svg";
 
 import "./photoInput.css";
 
-const FACING_MODE_USER = "user";
-const FACING_MODE_ENVIRONMENT = "environment";
-
 const PhotoInput = () => {
 	const { t } = useTranslation();
 	const navigate = useNavigate();
@@ -21,7 +18,6 @@ const PhotoInput = () => {
 	const [ allowPickPhoto, setAllowPickPhoto ] = useState(false);
 	const [ imageToUpload, setImageToUpload ] = useState("");
 	const [ loading, setLoading ] = useState(false);
-	const [ facingMode, setFacingMode ] = React.useState(FACING_MODE_ENVIRONMENT);
 
 	const triggerCamera = () => {
 		navigator.mediaDevices
@@ -34,7 +30,7 @@ const PhotoInput = () => {
 
 			setAllowPickPhoto(true);
 		}).catch(() => {
-			window.alert(t("Aucun device détecté !"));
+			window.alert(t("NoDevice"));
 		});
 	};
 
@@ -53,14 +49,6 @@ const PhotoInput = () => {
 
 		setImageToUpload(imageToTest);
 	}
-
-	// react-hooks/exhaustive-deps
-	const handleClick = () => {
-		setFacingMode(facingMode === FACING_MODE_USER
-			? FACING_MODE_ENVIRONMENT
-			: FACING_MODE_USER
-		);
-	};
 
 	// eslint-disable-next-line
 	useEffect(() => { triggerCamera() }, [ videoRef ]);
@@ -105,7 +93,6 @@ const PhotoInput = () => {
 								}
 
 								<video className="video" ref={videoRef} id="video" autoPlay></video>
-								<button className="swap-button" onClick={handleClick}>Swap</button>
 
 								<canvas ref={photoRef} className="canvas" width="600" height="600"></canvas>
 						</React.Fragment>

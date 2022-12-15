@@ -1,7 +1,7 @@
 {
 	"Presentation": "Bienvenue sur LemonTri, une web app pour apprendre les différentes consignes sur le recyclage afin d'adopter un mode de vie plus durable.",
 	"SortingInstructions": "Consignes de tri",
-	"NoDevice": "Aucun dispositif photo détecté !",
+	"NoDevice": "Aucun dispositif photo détecté ! Vérifiez vos autorisations avant de reprendre une photo.",
 	"Banned": "Interdits",
 	"FindOutMore": "En savoir +",
 	"DidUKnow": "Le saviez-vous ?",
