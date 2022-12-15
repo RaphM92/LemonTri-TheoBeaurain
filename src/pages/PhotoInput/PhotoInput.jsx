@@ -7,6 +7,14 @@ import Wrapper from "../../hooks/Wrapper";
 import Camera from "../../assets/icons/camera.svg";
 
 import "./photoInput.css";
+import Webcam from "react-webcam";
+
+const FACING_MODE_USER = "user";
+const FACING_MODE_ENVIRONMENT = "environment";
+
+const videoConstraints = {
+	facingMode: FACING_MODE_USER
+  };
 
 const PhotoInput = () => {
 	const { t } = useTranslation();
@@ -15,25 +23,30 @@ const PhotoInput = () => {
 	const videoRef = useRef(null);
 	const photoRef = useRef(null);
 
-	const [ allowPickPhoto, setAllowPickPhoto ] = useState(false);
+	const [facingMode, setFacingMode] = React.useState(FACING_MODE_USER);
+
+	// eslint-disable-next-line
+	const [ allowPickPhoto, setAllowPickPhoto ] = useState(true);
+	console.log('allowPickPhoto: ', allowPickPhoto);
 	const [ imageToUpload, setImageToUpload ] = useState("");
 	const [ loading, setLoading ] = useState(false);
 
-	const triggerCamera = () => {
-		navigator.mediaDevices
-		.getUserMedia({ video: true, audio: false })
-		.then(stream => {
-			const video = videoRef.current;
+	// const triggerCamera = () => {
+	// 	navigator.mediaDevices
+	// 	.getUserMedia({ video: true, audio: false })
+	// 	.then(stream => {
+	// 		const video = videoRef.current;
 
-			video.srcObject = stream;
-			video.play();
+	// 		video.srcObject = stream;
+	// 		video.play();
 
-			setAllowPickPhoto(true);
-		}).catch(() => {
-			window.alert(t("NoDevice"));
-		});
-	};
+	// 		setAllowPickPhoto(true);
+	// 	}).catch(() => {
+	// 		window.alert(t("NoDevice"));
+	// 	});
+	// };
 
+	// eslint-disable-next-line
 	const takePicture = async () => {
 		const width = 414;
 		const height = width / (16 / 9);
@@ -51,7 +64,23 @@ const PhotoInput = () => {
 	}
 
 	// eslint-disable-next-line
-	useEffect(() => { triggerCamera() }, [ videoRef ]);
+	// useEffect(() => { triggerCamera() }, [ videoRef ]);
+
+	const handleClick = React.useCallback(() => {
+		setFacingMode(
+		  prevState =>
+			prevState === FACING_MODE_USER
+			  ? FACING_MODE_ENVIRONMENT
+			  : FACING_MODE_USER
+		);
+	  }, []);
+
+	  const capture = React.useCallback(() => {
+		const imageSrc = videoRef.current.getScreenshot();
+		console.log('videoRef: ', videoRef);
+		console.log('imageSrc: ', imageSrc);
+		setImageToUpload(imageSrc);
+	  }, [videoRef]);
 
 	useEffect(() => {
 		if (imageToUpload !== "") {
@@ -78,8 +107,8 @@ const PhotoInput = () => {
 		<Wrapper
 			icon={Camera}
 			onClick={() => {
-				if (allowPickPhoto) takePicture();
-				else triggerCamera();
+				if (allowPickPhoto) capture();
+				// else triggerCamera();
 			}}
 		>
 			<div className="photo-input-container">
@@ -92,9 +121,21 @@ const PhotoInput = () => {
 										: null
 								}
 
-								<video className="video" ref={videoRef} id="video" autoPlay></video>
+								<Webcam
+								id="video" autoPlay
+									audio={false}
+									ref={videoRef}
+									screenshotFormat="image/jpeg"
+									videoConstraints={{
+										...videoConstraints,
+										facingMode
+									}}
+								/>
 
-								<canvas ref={photoRef} className="canvas" width="600" height="600"></canvas>
+								<button onClick={handleClick} className="swap-button">Swap</button>
+								{/* <video className="video" ref={videoRef} id="video" autoPlay></video>
+
+								<canvas ref={photoRef} className="canvas" width="600" height="600"></canvas> */}
 						</React.Fragment>
 						: <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
 				}
