@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 
+import Wrapper from "../../hooks/Wrapper";
 import dataRouting from "../../data/DataRouting";
 
 import { ListCategories } from "../../containers";
@@ -14,11 +15,13 @@ const Home = () => {
     const data = dataRouting();
 
     return (
-        <div className="home-container">
-			<Lsv />
-            <Title title={t("SortingInstructions")} image={LemonFoot} />
-            <ListCategories data={data} />
-        </div>
+        <Wrapper>
+			<div className="home-container">
+				<Lsv />
+				<Title title={t("SortingInstructions")} image={LemonFoot} />
+				<ListCategories data={data} />
+			</div>
+		</Wrapper>
     );
 };
 

@@ -1,23 +1,29 @@
 /** Rendering specific component according to location */
 
+import React from "react";
+
 import {
 	Home,
 	Settings,
 	Biowaste,
 	Bottle,
+	Score,
+	PhotoInput
 } from "../pages";
 
 export const renderComponent = (location) => {
 	switch (location) {
-		case "/":
-			return <Home />;
 		case "/settings":
-			return <Settings />
+			return <Settings />;
+		case "/photo":
+			return <PhotoInput />
+		case "/score":
+			return <Score />;
         case "/dechets-alimentaire":
             return <Biowaste />;
-		case "/bouteilles":
+		case "/bouteille":
 			return <Bottle />;
-
+		case "/":
 		default:
             return <Home />;
 	}
@@ -34,4 +40,32 @@ export const randomNumber = (number, max) => {
 
 	if (n === number) randomNumber(number, max);
 	return n;
+}
+
+/** Function to get color according to current note */
+
+export const getColorNote = (note) => {
+	switch (note) {
+		case 3:
+			return "#3BC171";
+		case 2:
+			return "#EB8440";
+		case 1:
+		default:
+			return "#D94140";
+	}
+}
+
+/** Function to get message to show according to current note */
+
+export const getMessageNote = (note, t) => {
+	switch (note) {
+		case 3:
+			return t("Perfect");
+		case 2:
+			return t("Unsuitable");
+		case 1:
+		default:
+			return t("Dumpster");
+	}
 }
