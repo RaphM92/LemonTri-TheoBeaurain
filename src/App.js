@@ -45,6 +45,12 @@ const App = () => {
             <Footer />
         </div>
     );
+	return (
+		<div className="app">
+
+		</div>
+	);
+
 }
 
 export default App;

@@ -12,7 +12,7 @@ const Footer = () => (
 	<div className="footer-container">
 		<div className="footer-icons">
 			<Link to="/"><img className="footer-icon" src={Home} alt="" /></Link>
-			<img className="footer-icon" src={Search} alt="" />
+			<Link to="/SearchPage"> <img className="footer-icon" src={Search} alt="" /></Link>
 
 			<div className="footer-main-icon">
 				<img className="footer-icon" src={Camera} alt="" />

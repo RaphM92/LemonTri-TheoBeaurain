@@ -5,7 +5,9 @@ import {
 	Settings,
 	Biowaste,
 	Bottle,
+	SearchPage
 } from "../pages";
+
 
 export const renderComponent = (location) => {
 	switch (location) {
@@ -17,6 +19,8 @@ export const renderComponent = (location) => {
             return <Biowaste />;
 		case "/bouteilles":
 			return <Bottle />;
+		case "/SearchPage":
+			return <SearchPage />
 
 		default:
             return <Home />;
