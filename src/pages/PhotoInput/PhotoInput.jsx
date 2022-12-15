@@ -5,15 +5,14 @@ import Webcam from "react-webcam";
 import Wrapper from "../../hooks/Wrapper";
 
 import Camera from "../../assets/icons/camera.svg";
-import Rotate from "../../assets/icons/rotate-solid.svg";
+// import Rotate from "../../assets/icons/rotate-solid.svg";
 
 import "./photoInput.css";
 
-const FACING_MODE_USER = "user";
 const FACING_MODE_ENVIRONMENT = "environment";
 
 const videoConstraints = {
-	facingMode: FACING_MODE_USER
+	facingMode: FACING_MODE_ENVIRONMENT
 };
 
 const PhotoInput = () => {
@@ -21,18 +20,18 @@ const PhotoInput = () => {
 
 	const videoRef = useRef(null);
 
-	const [ facingMode, setFacingMode ] = React.useState(FACING_MODE_ENVIRONMENT);
+	// const [ facingMode, setFacingMode ] = React.useState(FACING_MODE_ENVIRONMENT);
 	const [ imageToUpload, setImageToUpload ] = useState("");
 	const [ loading, setLoading ] = useState(false);
 
-	const handleClick = React.useCallback(() => {
-		setFacingMode(
-		  	prevState =>
-				prevState === FACING_MODE_USER
-				? FACING_MODE_ENVIRONMENT
-				: FACING_MODE_USER
-		);
-	}, []);
+	// const handleClick = React.useCallback(() => {
+	// 	setFacingMode(
+	// 	  	prevState =>
+	// 			prevState === FACING_MODE_USER
+	// 			? FACING_MODE_ENVIRONMENT
+	// 			: FACING_MODE_USER
+	// 	);
+	// }, []);
 
 	const capture = React.useCallback(() => {
 		const imageSrc = videoRef.current.getScreenshot();
@@ -77,13 +76,13 @@ const PhotoInput = () => {
 									screenshotFormat="image/jpeg"
 									videoConstraints={{
 										...videoConstraints,
-										facingMode
+										FACING_MODE_ENVIRONMENT
 									}}
 								/>
 
-								<button onClick={handleClick} className="swap-button">
+								{/* <button onClick={handleClick} className="swap-button">
 									<img src={Rotate} alt="" />
-								</button>
+								</button> */}
 						</React.Fragment>
 						: <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
 				}
