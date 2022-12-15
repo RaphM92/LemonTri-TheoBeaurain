@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataBottle as dataBottle } from "../../data/DataCategories";
+import { DataCap as dataCap } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -13,9 +13,9 @@ import { SeeMore } from "../../containers";
 
 import "./categories.css";
 
-const Bottle = () => {
+const Cap = () => {
 	const { t } = useTranslation();
-	const data = dataBottle(t);
+	const data = dataCap(t);
 
 	return (
 		<Wrapper>
@@ -44,4 +44,4 @@ const Bottle = () => {
 	);
 };
 
-export default Bottle;
+export default Cap;

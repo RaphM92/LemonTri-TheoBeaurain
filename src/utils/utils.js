@@ -6,11 +6,19 @@ import {
 	Home,
 	Settings,
 	Biowaste,
-	Bottle,
 	Score,
 	PhotoInput,
-	SearchPage
+	CardBoard,
+	Glass,
+	Can,
+	Cap,
+	Papper,
+	PlasticCup,
+	PapperCup,
+	DEE,
+	Cigarette
 } from "../pages";
+
 
 
 export const renderComponent = (location) => {
@@ -23,10 +31,24 @@ export const renderComponent = (location) => {
 			return <Score />;
         case "/dechets-alimentaire":
             return <Biowaste />;
-		case "/bouteille":
-			return <Bottle />;
-		case "/SearchPage":
-			return <SearchPage />
+		case "/carton":
+			return <CardBoard />;
+		case "/verre":
+			return <Glass />;
+		case "/DEE":
+			return <DEE />;
+		case "/megot":
+			return <Cigarette />;
+		case "/bouchon":
+			return <Cap />;
+		case "/canette":
+			return <Can />;
+		case "/gobelets-en-plastique":
+			return <PlasticCup />;
+		case "/gobelet-carton":
+			return <PapperCup />;
+		case "/papier":
+			return <Papper />;
 		case "/":
 		default:
             return <Home />;

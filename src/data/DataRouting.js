@@ -4,7 +4,7 @@ import Bouchon from "../assets/images/iconsCategory/Bouchon.png";
 import Bouteille from "../assets/images/iconsCategory/BouteillePlastique.png";
 import Canette from "../assets/images/iconsCategory/Canette.png";
 import Carton from "../assets/images/iconsCategory/CartonPlie.png";
-import DEEE from "../assets/images/iconsCategory/DEE.png";
+import DEE from "../assets/images/iconsCategory/DEE.png";
 import GobeletCarton from "../assets/images/iconsCategory/GobeletCarton.png";
 import GobeletPlastique from "../assets/images/iconsCategory/GobeletPlastique.png";
 import Marc from "../assets/images/iconsCategory/Marc.png";
@@ -19,11 +19,11 @@ import { t } from "i18next";
 const DataRouting = () => ([
     { label: t("Biowaste"), url: "dechets-alimentaire", image: Biodechet },
 	{ label: t("Wood"), url: "bois", image: Bois },
-	{ label: t("BottleCap"), url: "bouchon", image: Bouchon },
+	{ label: t("Cap"), url: "bouchon", image: Bouchon },
 	{ label: t("Bottle"), url: "bouteille", image: Bouteille },
 	{ label: t("Can"), url: "canette", image: Canette },
 	{ label: t("Cardboard"), url: "carton", image: Carton },
-	{ label: t("DEEE"), url: "DEEE", image: DEEE },
+	{ label: t("DEE"), url: "DEE", image: DEE },
 	{ label: t("PlasticCup"), url: "gobelet-plastique", image: GobeletPlastique },
 	{ label: t("PaperCup"), url: "gobelet-carton", image: GobeletCarton },
 	{ label: t("CoffeeGrounds"), url: "marc", image: Marc },
