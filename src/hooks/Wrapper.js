@@ -1,9 +1,11 @@
 import { Footer } from "../containers";
 
-const Wrapper = ({ children }) => (
+import Camera from "../assets/icons/camera-solid.svg";
+
+const Wrapper = ({ children, icon, onClick }) => (
 	<div>
 		{children}
-		<Footer />
+		<Footer onClick={onClick} icon={icon || Camera} />
 	</div>
 );
 
