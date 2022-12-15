@@ -8,8 +8,8 @@ const SeeMore = ({ color, data }) => {
 	const [ showMore, setShowMore ] = useState(false);
 
 	useEffect(() => {
-		if (showMore) window.scroll({
-			top: 240,
+		if (showMore) window.scrollTo({
+			top: 1000,
 			left: 0,
 			behavior: "smooth"
 		})
