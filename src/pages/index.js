@@ -2,6 +2,7 @@
 export { default as Home } from "./Home/Home";
 export { default as Settings } from "./Settings/Settings";
 export { default as Score } from "./Score/Score";
+export { default as SearchPage } from "./SearchPage/SearchPage";
 export { default as PhotoInput } from "./PhotoInput/PhotoInput";
 
 // Categories Page

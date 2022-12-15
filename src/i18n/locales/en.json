@@ -1,4 +1,5 @@
 {
+	"Presentation": "Welcome to LemonTri, a web app to learn the different recycling instructions to adopt a more sustainable lifestyle.",
     "SortingInstructions": "Sorting instructions",
 	"DidUKnow": "Did you know ?",
 	"FindOutMore": "Find out more",
@@ -20,6 +21,7 @@
     "Paper": "Paper",
     "Mask": "Mask",
     "CoffeeGrounds": "Coffee Grounds",
+	"ConfidentialPaper": "Confidential Paper",
     "Oil": "Oil",
     "DEEE": "WEEE",
     "Cartridge": "Cartridge",

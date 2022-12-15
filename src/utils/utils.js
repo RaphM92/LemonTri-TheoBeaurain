@@ -8,8 +8,10 @@ import {
 	Biowaste,
 	Bottle,
 	Score,
-	PhotoInput
+	PhotoInput,
+	SearchPage
 } from "../pages";
+
 
 export const renderComponent = (location) => {
 	switch (location) {
@@ -23,6 +25,8 @@ export const renderComponent = (location) => {
             return <Biowaste />;
 		case "/bouteille":
 			return <Bottle />;
+		case "/SearchPage":
+			return <SearchPage />
 		case "/":
 		default:
             return <Home />;

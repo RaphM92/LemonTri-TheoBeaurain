@@ -8,24 +8,22 @@ import Refresh from "../../assets/icons/refresh-ccw.svg";
 
 import "./footer.css";
 
-const Footer = () => {
-	return (
-		<div className="footer-container">
-			<div className="footer-icons">
-				<Link to="/"><img className="footer-icon" src={Home} alt="" /></Link>
-				<img className="footer-icon" src={Search} alt="" />
+const Footer = () => (
+	<div className="footer-container">
+		<div className="footer-icons">
+			<Link to="/"><img className="footer-icon" src={Home} alt="" /></Link>
+			<Link to="/SearchPage"><img className="footer-icon" src={Search} alt="" /></Link>
 
-				<div className="footer-main-icon">
-					<Link to="/photo"><img className="footer-icon" src={Camera} alt="" /></Link>
-					<span className="footer-circle"></span>
-					<span className="footer-dot"></span>
-				</div>
-
-				<img className="footer-icon" src={Bell} alt="" />
-				<Link to="/settings"><img className="footer-icon" src={Refresh} alt="" /></Link>
+			<div className="footer-main-icon">
+				<Link to="/photo"><img className="footer-icon" src={Camera} alt="" /></Link>
+				<span className="footer-circle"></span>
+				<span className="footer-dot"></span>
 			</div>
+
+			<img className="footer-icon" src={Bell} alt="" />
+			<Link to="/settings"><img className="footer-icon" src={Refresh} alt="" /></Link>
 		</div>
-	)
-};
+	</div>
+);
 
 export default Footer;
