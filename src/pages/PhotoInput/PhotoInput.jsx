@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
@@ -10,8 +10,6 @@ import "./photoInput.css";
 
 const FACING_MODE_USER = "user";
 const FACING_MODE_ENVIRONMENT = "environment";
-
-// const videoConstraints = { facingMode: FACING_MODE_ENVIRONMENT };
 
 const PhotoInput = () => {
 	const { t } = useTranslation();
@@ -56,12 +54,13 @@ const PhotoInput = () => {
 		setImageToUpload(imageToTest);
 	}
 
-	const handleClick = useCallback(() => {
+	// react-hooks/exhaustive-deps
+	const handleClick = () => {
 		setFacingMode(facingMode === FACING_MODE_USER
 			? FACING_MODE_ENVIRONMENT
 			: FACING_MODE_USER
 		);
-	});
+	};
 
 	// eslint-disable-next-line
 	useEffect(() => { triggerCamera() }, [ videoRef ]);
@@ -106,7 +105,7 @@ const PhotoInput = () => {
 								}
 
 								<video className="video" ref={videoRef} id="video" autoPlay></video>
-								<button onClick={handleClick}>Swap</button>
+								<button className="swap-button" onClick={handleClick}>Swap</button>
 
 								<canvas ref={photoRef} className="canvas" width="600" height="600"></canvas>
 						</React.Fragment>
