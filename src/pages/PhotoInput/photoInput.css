@@ -64,8 +64,8 @@
 	position: relative;
 	background-color: black;
 	width: 100%;
-	height: calc(100% - 75px);
-	height: 100vh;
+	height: calc(100vh - 35px);
+	/* height: 100vh; */
 	bottom: 40px;
 	display: flex;
 	align-items: flex-end;
