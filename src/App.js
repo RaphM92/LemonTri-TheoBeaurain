@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { renderComponent } from "./utils/utils";
 
-import { Footer } from "./containers";
 import { Logo, Lottie } from "./components";
 
 import LogoURL from "./assets/images/logo.png";
@@ -14,9 +13,26 @@ const App = () => {
 
     const [ showLoader, setShowLoader ] = useState(true);
 
+	useEffect(() => {
+		const initConnexion = async () => {
+			await fetch('https://www.nyckel.com/connect/token', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/x-www-form-urlencoded'
+				},
+				// TODO : Move before push inside .env
+				// body: `client_id=${process.env.REACT_APP_NYCKEL_ID}&client_secret=${process.env.REACT_APP_NYCKEL_SECRET}&grant_type=client_credentials`
+				body: "client_id=i0uvres19a8lbcswhoz50jd2j11b46ry&client_secret=jftpqfgeh7xdapcaukolt80znrbpdgw2j91vi2627losmzsuoqhjh55beu2y3q00&grant_type=client_credentials"
+			})
+			.then(response => response.json())
+			.then(data => localStorage.setItem("bearer-token", data.access_token));
+		}
+		initConnexion();
+	}, []);
+
 	// TODO : 3000
     useEffect(() => {
-        setTimeout(() => setShowLoader(false), 3000);
+        setTimeout(() => setShowLoader(false), 0);
     }, [])
 
     if (showLoader) {
@@ -41,8 +57,6 @@ const App = () => {
     return (
         <div className="app">
             { renderComponent(location && location.pathname) }
-
-            <Footer />
         </div>
     );
 }

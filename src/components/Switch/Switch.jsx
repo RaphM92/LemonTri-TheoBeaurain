@@ -3,7 +3,8 @@ import SwitchReact from "react-switch";
 import "./switch.css";
 
 const Switch = ({
-	color,
+	colorOn,
+	colorOff,
 	backgroundColor,
 	onChange,
 	checked,
@@ -12,8 +13,8 @@ const Switch = ({
 	<div className="switch-container">
 		<SwitchReact
 			onChange={onChange}
-			offHandleColor={color}
-			onHandleColor={color}
+			offHandleColor={colorOff}
+			onHandleColor={colorOn}
 			onColor={backgroundColor}
 			offColor={backgroundColor}
 			checkedIcon={false}
