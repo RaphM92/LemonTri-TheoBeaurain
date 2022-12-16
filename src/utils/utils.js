@@ -6,48 +6,70 @@ import {
 	Home,
 	Settings,
 	Biowaste,
-	Bottle,
 	Score,
 	PhotoInput,
-	SearchPage,
 	Tree,
-	Carton,
-	GobeletPlastique,
 	Marc,
 	NeonAmpoule,
 	PapierConfidentiel,
-	Autres
+	Autres,
+	CardBoard,
+	Glass,
+	Can,
+	Cap,
+	Papper,
+	PlasticCup,
+	PapperCup,
+	DEE,
+	Cigarette,
+	Bottle,
+	SearchPage
 } from "../pages";
+
 
 
 export const renderComponent = (location) => {
 	switch (location) {
 		case "/settings":
 			return <Settings />;
+		case "/recherche":
+			return <SearchPage />
 		case "/bois":
 			return <Tree />;
-		case "/marc":
+		case "/café":
 			return <Marc />;
-		case "/carton":
-			return <Carton />;
-		case "/gobelet-plastique":
-			return <GobeletPlastique />
 		case "/papier-confidentiel":
 			return <PapierConfidentiel />
-		case "/DIB":
+		case "/autres-déchets":
 			return <Autres />
-		case "/neon-ampoule":
+		case "/ampoule":
 			return <NeonAmpoule />
 		case "/photo":
 			return <PhotoInput />
 		case "/score":
 			return <Score />;
-        case "/dechets-alimentaire":
+        case "/déchet-alimentaire":
             return <Biowaste />;
-		case "/bouteille":
+		case "/carton":
+			return <CardBoard />;
+		case "/verre":
+			return <Glass />;
+		case "/déchet-electronique":
+			return <DEE />;
+		case "/cigarette":
+			return <Cigarette />;
+		case "/bouchon":
+			return <Cap />;
+		case "/canette":
+			return <Can />;
+		case "/gobelet-en-plastique":
+			return <PlasticCup />;
+		case "/gobelet-en-carton":
+			return <PapperCup />;
+		case "/papier":
+			return <Papper />;
+		case "/bouteille-en-plastique":
 			return <Bottle />;
-		case "/SearchPage":
-			return <SearchPage />
 		case "/":
 		default:
             return <Home />;

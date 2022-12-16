@@ -11,7 +11,7 @@ const Footer = ({ icon, onClick }) => (
 	<div className="footer-container">
 		<div className="footer-icons">
 			<Link to="/"><img className="footer-icon" src={Home} alt="" /></Link>
-			<Link to="/SearchPage"><img className="footer-icon" src={Search} alt="" /></Link>
+			<Link to="/recherche"><img className="footer-icon" src={Search} alt="" /></Link>
 
 			<div className="footer-main-icon">
 				<Link to="/photo" onClick={onClick}><img className="footer-icon" src={icon} alt="" /></Link>

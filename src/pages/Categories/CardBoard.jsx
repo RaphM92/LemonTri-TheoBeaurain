@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataCardboard as dataCardboard } from "../../data/DataCategories";
+import { DataCardBoard as dataCardBoard } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -13,9 +13,9 @@ import { SeeMore } from "../../containers";
 
 import "./categories.css";
 
-const Carton = () => {
+const CardBoard = () => {
 	const { t } = useTranslation();
-	const data = dataCardboard(t);
+	const data = dataCardBoard(t);
 
 	return (
 		<Wrapper>
@@ -44,4 +44,4 @@ const Carton = () => {
 	);
 };
 
-export default Carton;
+export default CardBoard;

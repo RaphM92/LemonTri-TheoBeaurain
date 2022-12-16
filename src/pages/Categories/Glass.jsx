@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataGobeletPlastique as dataGobeletPlastique } from "../../data/DataCategories";
+import { DataGlass as dataGlass } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -13,9 +13,9 @@ import { SeeMore } from "../../containers";
 
 import "./categories.css";
 
-const GobeletPlastique = () => {
+const Glass = () => {
 	const { t } = useTranslation();
-	const data = dataGobeletPlastique(t);
+	const data = dataGlass(t);
 
 	return (
 		<Wrapper>
@@ -44,4 +44,4 @@ const GobeletPlastique = () => {
 	);
 };
 
-export default GobeletPlastique;
+export default Glass;
