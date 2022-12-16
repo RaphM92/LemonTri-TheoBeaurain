@@ -1,5 +1,13 @@
 // Biowaste
 import Biowaste from "../assets/images/iconsCategory/Biodechet.png";
+import Ampoule from "../assets/images/imagesCategory/Ampoule.png";
+import Bois from "../assets/images/imagesCategory/Bois.png";
+import DIB from "../assets/images/imagesCategory/DIB.png";
+import Marc from "../assets/images/imagesCategory/Marc.png";
+import PapierConfidentiel from "../assets/images/imagesCategory/PapierConfidenciel.png";
+import GobeletsPlastique from "../assets/images/imagesCategory/GobeletsPlastique.png";
+import Carton from "../assets/images/imagesCategory/Carton.png";
+import Bouteille from "../assets/images/imagesCategory/Bouteille.png";
 import BiowasteIcon from "../assets/images/imagesCategory/biowaste-1.png";
 import Biowaste1 from "../assets/images/imagesCycle/biowaste/1.png";
 import Biowaste2 from "../assets/images/imagesCycle/biowaste/2.png";
@@ -14,6 +22,7 @@ import MarcIcon from "../assets/images/iconsCategory/Marc.png";
 import NeonAmpouleIcon from "../assets/images/iconsCategory/NeonAmpoule.png";
 import PapierConfidentielIcon from "../assets/images/iconsCategory/PapierConfidentiel.png";
 import DIBIcon from "../assets/images/iconsCategory/DIB.png";
+import BouteilleIcon from "../assets/images/iconsCategory/BouteillePlastique.png";
 
 export const DataBiowaste = (t) => ({
 	title: t("Biowaste"),
@@ -38,9 +47,9 @@ export const DataBiowaste = (t) => ({
 // TODO : Change icon, infos, image
 export const DataBottle = (t) => ({
 	title: t("Bottle"),
-	icon: Biowaste,
+	icon: BouteilleIcon,
 	color: "#ECB342",
-	infos: { image: BiowasteIcon },
+	infos: { image: Bouteille },
 	banned: t("BottleBanned"),
 	cycleData: [
 		{ image: Biowaste1, label: t("BiowasteCycle1") },
@@ -59,7 +68,7 @@ export const DataTree = (t) => ({
 	title: t("Tree"),
 	icon: BoisIcon,
 	color: "#73a348",
-	infos: { image: BiowasteIcon },
+	infos: { image: Bois },
 	banned: t("TreeBanned"),
 	cycleData: [
 		{ image: Biowaste1, label: t("TreeCycle1") },
@@ -77,7 +86,7 @@ export const DataCardboard = (t) => ({
 	title: t("Carton"),
 	icon: CartonIcon,
 	color: "#b08f65",
-	infos: { image: BiowasteIcon },
+	infos: { image: Carton },
 	banned: t("CartonBanned"),
 	cycleData: [
 		{ image: Biowaste1, label: t("CartonCycle1") },
@@ -95,7 +104,7 @@ export const DataGobeletPlastique = (t) => ({
 	title: t("GobeletPlastique"),
 	icon: GobeletPlastiqueIcon,
 	color: "#e3743b",
-	infos: { image: BiowasteIcon },
+	infos: { image: GobeletsPlastique },
 	banned: t("GobeletPlastiqueBanned"),
 	cycleData: [
 		{ image: Biowaste1, label: t("GobeletPlastiqueCycle1") },
@@ -113,7 +122,7 @@ export const DataMarc = (t) => ({
 	title: t("Marc"),
 	icon: MarcIcon,
 	color: "#2e241b",
-	infos: { image: BiowasteIcon },
+	infos: { image: Marc },
 	banned: t("MarcBanned"),
 	cycleData: [
 		{ image: Biowaste1, label: t("MarcCycle1") },
@@ -129,7 +138,7 @@ export const DataNeonAmpoule = (t) => ({
 	title: t("NeonAmpoule"),
 	icon: NeonAmpouleIcon,
 	color: "#7f3a67",
-	infos: { image: BiowasteIcon },
+	infos: { image: Ampoule },
 	banned: t("NeonAmpouleBanned"),
 	cycleData: [
 		{ image: Biowaste1, label: t("NeonAmpouleCycle1") },
@@ -163,6 +172,6 @@ export const DataAutres = (t) => ({
 	title: t("Autres"),
 	icon: DIBIcon,
 	color: "#1d1d1b",
-	infos: { image: BiowasteIcon },
+	infos: { image: DIB },
 	banned: t("AutresBanned")
 });
