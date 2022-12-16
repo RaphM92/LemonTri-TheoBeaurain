@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataNeonAmpoule as DataNeonAmpoule } from "../../data/DataCategories";
+import { DataNeonAmpoule as dataNeonAmpoule } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -15,7 +15,7 @@ import "./categories.css";
 
 const NeonAmpoule = () => {
 	const { t } = useTranslation();
-	const data = DataNeonAmpoule(t);
+	const data = dataNeonAmpoule(t);
 
 	return (
 		<Wrapper>

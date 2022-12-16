@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataTree as DataTree } from "../../data/DataCategories";
+import { DataTree as dataTree } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -15,7 +15,7 @@ import "./categories.css";
 
 const Tree = () => {
 	const { t } = useTranslation();
-	const data = DataTree(t);
+	const data = dataTree(t);
 
 	return (
 		<Wrapper>

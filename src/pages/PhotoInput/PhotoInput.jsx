@@ -1,18 +1,38 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import Webcam from "react-webcam";
 
 import Wrapper from "../../hooks/Wrapper";
 
 import Camera from "../../assets/icons/camera.svg";
+// import Rotate from "../../assets/icons/rotate-solid.svg";
 
 import "./photoInput.css";
 
+const FACING_MODE_ENVIRONMENT = "environment";
+
+const videoConstraints = {
+	facingMode: FACING_MODE_ENVIRONMENT
+};
+
 const PhotoInput = () => {
-	const [ allowPickPhoto, setAllowPickPhoto ] = useState(false);
+	const navigate = useNavigate();
+
+	const videoRef = useRef(null);
+
 	const [ imageToUpload, setImageToUpload ] = useState("");
+	const [ loading, setLoading ] = useState(false);
+
+	const capture = React.useCallback(() => {
+		const imageSrc = videoRef.current.getScreenshot();
+		setImageToUpload(imageSrc);
+	}, [ videoRef ]);
 
 	useEffect(() => {
 		if (imageToUpload !== "") {
-			fetch('https://www.nyckel.com/v1/functions/du7reicg55xtbosf/invoke', {
+			setLoading(true);
+
+			fetch('https://www.nyckel.com/v1/functions/g6kivstjrnb4niwq/invoke', {
 				method: 'POST',
 				headers: {
 					'Authorization': `Bearer ${localStorage.getItem("bearer-token")}`,
@@ -22,49 +42,39 @@ const PhotoInput = () => {
 			})
 			.then(response => response.json())
 			.then(data => {
-				console.log('data: ', data);
-				localStorage.setItem("label", data.labelName)
+				navigate(`/${data.labelName.toLowerCase()}`);
+				setLoading(false);
 			});
 		}
+		// eslint-disable-next-line
 	}, [ imageToUpload ]);
 
-	const triggerCamera = async () => {
-		const video = document.querySelector("#video");
-		const stream = await navigator.mediaDevices.getUserMedia({ video: true, audio: false });
-		video.srcObject = stream;
-
-		setAllowPickPhoto(true);
-	}
-
-	const takePicture = () => {
-		const video = document.querySelector("#video");
-		const canvas = document.querySelector("#canvas");
-
-		canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-		const imageDataUrl = canvas.toDataURL('image/jpeg');
-
-		setImageToUpload(imageDataUrl);
-	}
-
 	return (
-		<Wrapper>
+		<Wrapper
+			icon={Camera}
+			onClick={capture}
+		>
 			<div className="photo-input-container">
 				{
-					allowPickPhoto
-						? <button id="start-camera" className="camera-button" onClick={takePicture}>
-							<img src={Camera} alt="" />
-						</button>
-						: <button id="start-camera" className="camera-button" onClick={triggerCamera}>
-							<img src={Camera} alt="" />
-						</button>
+					!loading
+						? <React.Fragment>
+								<Webcam
+									className="video"
+									autoPlay
+									audio={false}
+									ref={videoRef}
+									screenshotFormat="image/jpeg"
+									videoConstraints={{
+										...videoConstraints,
+										FACING_MODE_ENVIRONMENT
+									}}
+								/>
+						</React.Fragment>
+						: <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
 				}
-
-				<video className="video" id="video" autoPlay></video>
-
-				<canvas id="canvas" className="canvas" width="600" height="600"></canvas>
 			</div>
 		</Wrapper>
-	)
+	);
 };
 
 export default PhotoInput;

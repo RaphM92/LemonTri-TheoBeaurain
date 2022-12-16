@@ -29,7 +29,7 @@ const Lsv = ({ color }) => {
 
             setCurrentLSV(data[random]);
 			setSelectedLSV(random);
-        }, 60000);
+        }, 30000);
 
         return () => clearInterval(interval);
     }, [ data ]);

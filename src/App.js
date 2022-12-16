@@ -34,7 +34,7 @@ const App = () => {
 	}, [ REACT_APP_NYCKEL_ID, REACT_APP_NYCKEL_SECRET]);
 
     useEffect(() => {
-        setTimeout(() => setShowLoader(false), 3000);
+        setTimeout(() => setShowLoader(false), 0);
     }, [])
 
     if (showLoader) {
