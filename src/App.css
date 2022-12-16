@@ -17,6 +17,7 @@ html, body, #root {
 .app {
     text-align: center;
     overflow-y: hidden;
+	min-height: 100vh;
 }
 
 .app-loader {

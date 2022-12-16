@@ -5,6 +5,7 @@ import {
 	Settings,
 	Biowaste,
 	Bottle,
+	VirtualReality
 } from "../pages";
 
 export const renderComponent = (location) => {
@@ -17,6 +18,8 @@ export const renderComponent = (location) => {
             return <Biowaste />;
 		case "/bouteilles":
 			return <Bottle />;
+		case "/virtual-reality":
+			return <VirtualReality />;
 
 		default:
             return <Home />;

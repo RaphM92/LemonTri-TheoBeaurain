@@ -1,4 +1,4 @@
-import Biodechet from "../assets/images/iconsCategory/Biodechet.png";
+import Biodechet from "../assets/images/iconsCategory/biodechet.png";
 import Bois from "../assets/images/iconsCategory/Bois.png";
 import Bouchon from "../assets/images/iconsCategory/Bouchon.png";
 import Bouteille from "../assets/images/iconsCategory/BouteillePlastique.png";

@@ -1,5 +1,5 @@
 // Biowaste
-import Biowaste from "../assets/images/iconsCategory/Biodechet.png";
+import Biowaste from "../assets/images/iconsCategory/biodechet.png";
 import BiowasteIcon from "../assets/images/imagesCategory/biowaste-1.png";
 import Biowaste1 from "../assets/images/imagesCycle/biowaste/1.png";
 import Biowaste2 from "../assets/images/imagesCycle/biowaste/2.png";
