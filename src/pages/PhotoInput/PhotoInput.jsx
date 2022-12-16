@@ -42,7 +42,7 @@ const PhotoInput = () => {
 			})
 			.then(response => response.json())
 			.then(data => {
-				navigate(`/${data.labelName.toLowerCase()}`);
+				navigate(`/${decodeURIComponent(data.labelName.toLowerCase()).replaceAll(" ", "-")}`);
 				setLoading(false);
 			});
 		}

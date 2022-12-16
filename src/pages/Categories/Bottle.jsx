@@ -13,7 +13,7 @@ import { SeeMore } from "../../containers";
 
 import "./categories.css";
 
-const Bottle = () => {
+const Biowaste = () => {
 	const { t } = useTranslation();
 	const data = dataBottle(t);
 
@@ -44,4 +44,4 @@ const Bottle = () => {
 	);
 };
 
-export default Bottle;
+export default Biowaste;

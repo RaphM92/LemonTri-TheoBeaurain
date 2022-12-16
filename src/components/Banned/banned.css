@@ -31,8 +31,10 @@
 	font-size: 26px;
 	margin-left: 6px;
 	line-height: 39px;
+	padding: 0px !important;
 }
 
 .banned-container span {
 	color: #E65F5F;
+	padding: 2px 16px;
 }

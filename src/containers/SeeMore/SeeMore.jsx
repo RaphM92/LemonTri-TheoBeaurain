@@ -5,7 +5,6 @@ import { Button, Cycle } from "../../components";
 import "./seeMore.css";
 
 const SeeMore = ({ color, data }) => {
-	console.log('data: ', data);
 	const [ showMore, setShowMore ] = useState(false);
 
 	useEffect(() => {

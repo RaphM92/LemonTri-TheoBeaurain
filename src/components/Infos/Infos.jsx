@@ -1,6 +1,7 @@
 import "./infos.css";
 
 const Infos = ({ infos, color }) => {
+	console.log('infos: ', infos);
 	return (
 		<div className="infos-container">
 			<div className="info-container">
