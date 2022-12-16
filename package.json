@@ -15,13 +15,9 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1",
     "react-switch": "^7.0.0",
-<<<<<<< HEAD
-    "web-vitals": "^2.1.4",
-    "yarn": "^1.22.19"
-=======
+    "yarn": "^1.22.19",
     "react-webcam": "^7.0.1",
     "web-vitals": "^2.1.4"
->>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
   },
   "scripts": {
     "start": "react-scripts start",

@@ -23,11 +23,8 @@ import {
 	DEE,
 	Cigarette,
 	Bottle,
-<<<<<<< HEAD
-	VirtualReality
-=======
+	VirtualReality,
 	SearchPage
->>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 } from "../pages";
 
 
@@ -74,13 +71,9 @@ export const renderComponent = (location) => {
 			return <Papper />;
 		case "/bouteille-en-plastique":
 			return <Bottle />;
-<<<<<<< HEAD
 		case "/virtual-reality":
 			return <VirtualReality />;
-
-=======
 		case "/":
->>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 		default:
             return <Home />;
 	}

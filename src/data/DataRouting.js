@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-import Biodechet from "../assets/images/iconsCategory/biodechet.png";
-=======
 import { t } from "i18next";
 
 import Biodechet from "../assets/images/iconsCategory/Biodechet.png";
->>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 import Bois from "../assets/images/iconsCategory/Bois.png";
 import Bouchon from "../assets/images/iconsCategory/Bouchon.png";
 import Bouteille from "../assets/images/iconsCategory/BouteillePlastique.png";

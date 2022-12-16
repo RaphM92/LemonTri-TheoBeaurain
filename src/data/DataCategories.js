@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-// Biowaste
-import Biowaste from "../assets/images/iconsCategory/biodechet.png";
-=======
 import Biowaste from "../assets/images/iconsCategory/Biodechet.png";
 import Ampoule from "../assets/images/imagesCategory/Ampoule.png";
 import Bois from "../assets/images/imagesCategory/Bois.png";
@@ -10,7 +6,6 @@ import Marc from "../assets/images/imagesCategory/Marc.png";
 import GobeletsPlastique from "../assets/images/imagesCategory/GobeletsPlastique.png";
 import Carton from "../assets/images/imagesCategory/Carton.png";
 import Bouteille from "../assets/images/imagesCategory/Bouteille.png";
->>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 import BiowasteIcon from "../assets/images/imagesCategory/biowaste-1.png";
 import Biowaste1 from "../assets/images/imagesCycle/biowaste/1.png";
 import Biowaste2 from "../assets/images/imagesCycle/biowaste/2.png";

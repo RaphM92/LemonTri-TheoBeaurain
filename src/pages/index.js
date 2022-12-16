@@ -8,11 +8,10 @@ export { default as PhotoInput } from "./PhotoInput/PhotoInput";
 // Categories Page
 export { default as Biowaste } from "./Categories/Biowaste";
 export { default as Bottle } from "./Categories/Bottle";
-<<<<<<< HEAD
 
 // Virtual Reality
 export { default as VirtualReality} from "./VirtualReality/VirtualReality"
-=======
+
 export { default as Tree } from "./Categories/Tree";
 export { default as Marc } from "./Categories/Marc";
 export { default as NeonAmpoule } from "./Categories/NeonAmpoule";
@@ -27,4 +26,3 @@ export { default as Cigarette } from "./Categories/Cigarette";
 export { default as PlasticCup } from "./Categories/PlasticCup";
 export { default as PapperCup } from "./Categories/PapperCup";
 export { default as Glass } from "./Categories/Glass";
->>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
