@@ -20,18 +20,8 @@ const PhotoInput = () => {
 
 	const videoRef = useRef(null);
 
-	// const [ facingMode, setFacingMode ] = React.useState(FACING_MODE_ENVIRONMENT);
 	const [ imageToUpload, setImageToUpload ] = useState("");
 	const [ loading, setLoading ] = useState(false);
-
-	// const handleClick = React.useCallback(() => {
-	// 	setFacingMode(
-	// 	  	prevState =>
-	// 			prevState === FACING_MODE_USER
-	// 			? FACING_MODE_ENVIRONMENT
-	// 			: FACING_MODE_USER
-	// 	);
-	// }, []);
 
 	const capture = React.useCallback(() => {
 		const imageSrc = videoRef.current.getScreenshot();
@@ -79,10 +69,6 @@ const PhotoInput = () => {
 										FACING_MODE_ENVIRONMENT
 									}}
 								/>
-
-								{/* <button onClick={handleClick} className="swap-button">
-									<img src={Rotate} alt="" />
-								</button> */}
 						</React.Fragment>
 						: <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
 				}

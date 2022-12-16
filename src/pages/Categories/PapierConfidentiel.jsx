@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataPapierConfidentiel as DataPapierConfidentiel } from "../../data/DataCategories";
+import { DataPapierConfidentiel as dataPapierConfidentiel } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -15,7 +15,7 @@ import "./categories.css";
 
 const PapierConfidentiel = () => {
 	const { t } = useTranslation();
-	const data = DataPapierConfidentiel(t);
+	const data = dataPapierConfidentiel(t);
 
 	return (
 		<Wrapper>

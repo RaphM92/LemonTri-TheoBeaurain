@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataAutres as DataAutres } from "../../data/DataCategories";
+import { DataAutres as dataAutres } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -15,7 +15,7 @@ import "./categories.css";
 
 const Autres = () => {
 	const { t } = useTranslation();
-	const data = DataAutres(t);
+	const data = dataAutres(t);
 
 	return (
 		<Wrapper>

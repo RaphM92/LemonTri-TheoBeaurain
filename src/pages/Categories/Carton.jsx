@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataCardboard as DataCardboard } from "../../data/DataCategories";
+import { DataCardboard as dataCardboard } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -15,7 +15,7 @@ import "./categories.css";
 
 const Carton = () => {
 	const { t } = useTranslation();
-	const data = DataCardboard(t);
+	const data = dataCardboard(t);
 
 	return (
 		<Wrapper>

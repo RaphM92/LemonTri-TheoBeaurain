@@ -58,7 +58,7 @@ export const DataBottle = (t) => ({
 export const DataTree = (t) => ({
 	title: t("Tree"),
 	icon: BoisIcon,
-	color: "#ECB342",
+	color: "#73a348",
 	infos: { image: BiowasteIcon },
 	banned: t("TreeBanned"),
 	cycleData: [
@@ -76,7 +76,7 @@ export const DataTree = (t) => ({
 export const DataCardboard = (t) => ({
 	title: t("Carton"),
 	icon: CartonIcon,
-	color: "#ECB342",
+	color: "#b08f65",
 	infos: { image: BiowasteIcon },
 	banned: t("CartonBanned"),
 	cycleData: [
@@ -94,7 +94,7 @@ export const DataCardboard = (t) => ({
 export const DataGobeletPlastique = (t) => ({
 	title: t("GobeletPlastique"),
 	icon: GobeletPlastiqueIcon,
-	color: "#ECB342",
+	color: "#e3743b",
 	infos: { image: BiowasteIcon },
 	banned: t("GobeletPlastiqueBanned"),
 	cycleData: [
@@ -112,7 +112,7 @@ export const DataGobeletPlastique = (t) => ({
 export const DataMarc = (t) => ({
 	title: t("Marc"),
 	icon: MarcIcon,
-	color: "#ECB342",
+	color: "#2e241b",
 	infos: { image: BiowasteIcon },
 	banned: t("MarcBanned"),
 	cycleData: [
@@ -128,7 +128,7 @@ export const DataMarc = (t) => ({
 export const DataNeonAmpoule = (t) => ({
 	title: t("NeonAmpoule"),
 	icon: NeonAmpouleIcon,
-	color: "#ECB342",
+	color: "#7f3a67",
 	infos: { image: BiowasteIcon },
 	banned: t("NeonAmpouleBanned"),
 	cycleData: [
@@ -144,7 +144,7 @@ export const DataNeonAmpoule = (t) => ({
 export const DataPapierConfidentiel = (t) => ({
 	title: t("PapierConfidentiel"),
 	icon: PapierConfidentielIcon,
-	color: "#ECB342",
+	color: "#365aaa",
 	infos: { image: BiowasteIcon },
 	banned: t("PapierConfidentielBanned"),
 	cycleData: [
@@ -162,11 +162,7 @@ export const DataPapierConfidentiel = (t) => ({
 export const DataAutres = (t) => ({
 	title: t("Autres"),
 	icon: DIBIcon,
-	color: "#ECB342",
+	color: "#1d1d1b",
 	infos: { image: BiowasteIcon },
-	banned: t("AutresBanned"),
-	cycleData: [
-		{ image: Biowaste1, label: t("AutresCycle1") },
-		{ image: Biowaste2, label: t("AutresCycle2") }
-	]
+	banned: t("AutresBanned")
 });

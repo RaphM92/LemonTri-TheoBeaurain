@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataGobeletPlastique as DataGobeletPlastique } from "../../data/DataCategories";
+import { DataGobeletPlastique as dataGobeletPlastique } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -15,7 +15,7 @@ import "./categories.css";
 
 const GobeletPlastique = () => {
 	const { t } = useTranslation();
-	const data = DataGobeletPlastique(t);
+	const data = dataGobeletPlastique(t);
 
 	return (
 		<Wrapper>

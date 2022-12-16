@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 
 import Wrapper from "../../hooks/Wrapper";
-import { DataTree as dataTree } from "../../data/DataCategories";
+import { DataNeonAmpoule as dataNeonAmpoule } from "../../data/DataCategories";
 
 import {
 	CategoryTitle,
@@ -13,9 +13,9 @@ import { SeeMore } from "../../containers";
 
 import "./categories.css";
 
-const Tree = () => {
+const NeonAmpoule = () => {
 	const { t } = useTranslation();
-	const data = dataTree(t);
+	const data = dataNeonAmpoule(t);
 
 	return (
 		<Wrapper>
@@ -44,4 +44,4 @@ const Tree = () => {
 	);
 };
 
-export default Tree;
+export default NeonAmpoule;
