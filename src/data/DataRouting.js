@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 import Biodechet from "../assets/images/iconsCategory/biodechet.png";
+=======
+import { t } from "i18next";
+
+import Biodechet from "../assets/images/iconsCategory/Biodechet.png";
+>>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 import Bois from "../assets/images/iconsCategory/Bois.png";
 import Bouchon from "../assets/images/iconsCategory/Bouchon.png";
 import Bouteille from "../assets/images/iconsCategory/BouteillePlastique.png";
@@ -16,22 +22,22 @@ import Verre from "../assets/images/iconsCategory/Verre.png";
 import DIB from "../assets/images/iconsCategory/DIB.png";
 
 const DataRouting = () => ([
-    { url: "dechets-alimentaire", image: Biodechet },
-	{ url: "bois", image: Bois },
-	{ url: "bouchon", image: Bouchon },
-	{ url: "bouteille", image: Bouteille },
-	{ url: "canette", image: Canette },
-	{ url: "carton", image: Carton },
-	{ url: "DEE", image: DEE },
-	{ url: "gobelet-plastique", image: GobeletPlastique },
-	{ url: "gobelet-carton", image: GobeletCarton },
-	{ url: "marc", image: Marc },
-	{ url: "megot", image: Megot },
-	{ url: "neon-ampoule", image: NeonAmpoule },
-	{ url: "papier", image: Papier },
-	{ url: "papier-confidentiel", image: PapierConfidentiel },
-	{ url: "verre", image: Verre },
-	{ url: "DIB", image: DIB }
+    { label: t("Biowaste"), url: "dechet-alimentaire", image: Biodechet },
+	{ label: t("Wood"), url: "bois", image: Bois },
+	{ label: t("Cap"), url: "bouchon", image: Bouchon },
+	{ label: t("Bottle"), url: "bouteille-en-plastique", image: Bouteille },
+	{ label: t("Can"), url: "canette", image: Canette },
+	{ label: t("Cardboard"), url: "carton", image: Carton },
+	{ label: t("DEE"), url: "dechet-electronique", image: DEE },
+	{ label: t("PlasticCup"), url: "gobelet-en-plastique", image: GobeletPlastique },
+	{ label: t("PaperCup"), url: "gobelet-en-carton", image: GobeletCarton },
+	{ label: t("CoffeeGrounds"), url: "cafe", image: Marc },
+	{ label: t("CigarettesButt"), url: "cigarette", image: Megot },
+	{ label: t("Bulb"), url: "ampoule", image: NeonAmpoule },
+	{ label: t("Paper"), url: "papier", image: Papier },
+	{ label: t("ConfidentialPaper"), url: "papier-confidentiel", image: PapierConfidentiel },
+	{ label: t("Glass"), url: "verre", image: Verre },
+	{ label: t("DIB"), url: "autres-dEchets", image: DIB }
 ]);
 
 export default DataRouting;

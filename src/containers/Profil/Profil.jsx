@@ -1,4 +1,4 @@
-import ProfilImage from "../../assets/images/monokuma.jpg";
+import ProfilImage from "../../assets/images/lemon192.png";
 
 import "./profil.css";
 

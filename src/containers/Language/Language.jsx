@@ -21,7 +21,8 @@ const Language = () => {
 					setChecked(checked !== "fr" ? "fr" : "en")
 				}}
 				icon={FrenchFlag}
-				color="#97B21B"
+				colorOn="#97B21B"
+				colorOff="#D94140"
 				checked={checked === "fr"}
 				backgroundColor="#EFEFEF"
 			/>
@@ -31,7 +32,8 @@ const Language = () => {
 					setChecked(checked !== "en" ? "en" : "fr")
 				}}
 				icon={EnglishFlag}
-				color="#97B21B"
+				colorOn="#97B21B"
+				colorOff="#D94140"
 				checked={checked === "en"}
 				backgroundColor="#EFEFEF"
 			/>

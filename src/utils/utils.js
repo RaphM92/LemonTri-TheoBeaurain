@@ -1,26 +1,86 @@
 /** Rendering specific component according to location */
 
+import React from "react";
+
 import {
 	Home,
 	Settings,
 	Biowaste,
+	Score,
+	PhotoInput,
+	Tree,
+	Marc,
+	NeonAmpoule,
+	PapierConfidentiel,
+	Autres,
+	CardBoard,
+	Glass,
+	Can,
+	Cap,
+	Papper,
+	PlasticCup,
+	PapperCup,
+	DEE,
+	Cigarette,
 	Bottle,
+<<<<<<< HEAD
 	VirtualReality
+=======
+	SearchPage
+>>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 } from "../pages";
+
+
 
 export const renderComponent = (location) => {
 	switch (location) {
-		case "/":
-			return <Home />;
 		case "/settings":
-			return <Settings />
-        case "/dechets-alimentaire":
+			return <Settings />;
+		case "/recherche":
+			return <SearchPage />
+		case "/bois":
+			return <Tree />;
+		case "/cafe":
+			return <Marc />;
+		case "/papier-confidentiel":
+			return <PapierConfidentiel />
+		case "/autres-dechets":
+			return <Autres />
+		case "/ampoule":
+			return <NeonAmpoule />
+		case "/photo":
+			return <PhotoInput />
+		case "/score":
+			return <Score />;
+        case "/dechet-alimentaire":
             return <Biowaste />;
-		case "/bouteilles":
+		case "/carton":
+			return <CardBoard />;
+		case "/verre":
+			return <Glass />;
+		case "/dechet-electronique":
+			return <DEE />;
+		case "/cigarette":
+			return <Cigarette />;
+		case "/bouchon":
+			return <Cap />;
+		case "/canette":
+			return <Can />;
+		case "/gobelet-en-plastique":
+			return <PlasticCup />;
+		case "/gobelet-en-carton":
+			return <PapperCup />;
+		case "/papier":
+			return <Papper />;
+		case "/bouteille-en-plastique":
 			return <Bottle />;
+<<<<<<< HEAD
 		case "/virtual-reality":
 			return <VirtualReality />;
 
+=======
+		case "/":
+>>>>>>> 6abbb9c4259fb0b79d442f99bc4a53cb95f18d2d
 		default:
             return <Home />;
 	}
@@ -37,4 +97,32 @@ export const randomNumber = (number, max) => {
 
 	if (n === number) randomNumber(number, max);
 	return n;
+}
+
+/** Function to get color according to current note */
+
+export const getColorNote = (note) => {
+	switch (note) {
+		case 3:
+			return "#3BC171";
+		case 2:
+			return "#EB8440";
+		case 1:
+		default:
+			return "#D94140";
+	}
+}
+
+/** Function to get message to show according to current note */
+
+export const getMessageNote = (note, t) => {
+	switch (note) {
+		case 3:
+			return t("Perfect");
+		case 2:
+			return t("Unsuitable");
+		case 1:
+		default:
+			return t("Dumpster");
+	}
 }

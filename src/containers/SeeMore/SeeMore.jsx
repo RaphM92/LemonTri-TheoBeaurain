@@ -8,8 +8,8 @@ const SeeMore = ({ color, data }) => {
 	const [ showMore, setShowMore ] = useState(false);
 
 	useEffect(() => {
-		if (showMore) window.scroll({
-			top: 240,
+		if (showMore) window.scrollTo({
+			top: 1000,
 			left: 0,
 			behavior: "smooth"
 		})
@@ -17,9 +17,11 @@ const SeeMore = ({ color, data }) => {
 
 	return (
 		<div className="see-more-container">
-			<div className="see-more-button" onClick={() => setShowMore(!showMore)} >
-				<Button color={color} />
-			</div>
+			{
+				data && <div className="see-more-button" onClick={() => setShowMore(!showMore)} >
+					<Button color={color} />
+				</div>
+			}
 
 			{
 				showMore && data

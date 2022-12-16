@@ -13,3 +13,4 @@ export { default as Button } from "./Button/Button";
 export { default as Cycle } from "./Cycle/Cycle";
 export { default as Switch } from "./Switch/Switch";
 export { default as ButtonParams } from "./ButtonParams/ButtonParams";
+export { default as Note } from "./Note/Note";
